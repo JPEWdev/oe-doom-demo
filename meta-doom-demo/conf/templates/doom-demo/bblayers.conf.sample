@@ -1,0 +1,4 @@
+BUILD_DEVICE ?= "qemu"
+
+OEROOT = "##OEROOT##"
+require ##OEROOT##/../meta-doom-demo/conf/devices/${BUILD_DEVICE}/layers.conf
