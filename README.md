@@ -23,6 +23,12 @@ first step is to clone down the submodules:
 git submodules update --init --recursive
 ```
 
+*NOTE:* When dealing with submodules, it is highly recommended to enable
+diffing of submodule history with:
+```bash
+git config diff.submodule log
+```
+
 Next, initialize the build environment, optionally specifying the build directory:
 
 ```bash
