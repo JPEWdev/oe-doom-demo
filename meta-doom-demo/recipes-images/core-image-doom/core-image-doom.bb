@@ -15,5 +15,7 @@ CORE_IMAGE_BASE_INSTALL += "\
     zdoom-autolaunch \
     weston \
     weston-init \
+    avahi-daemon \
+    avahi-autoipd \
     ${DOOM_GAME} \
     "
