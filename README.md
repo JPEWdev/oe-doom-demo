@@ -37,7 +37,7 @@ Next, initialize the build environment, optionally specifying the build director
 
 Finally, the images can be built with:
 
-```
+```bash
 bitbake core-image-doom
 ```
 
@@ -45,12 +45,19 @@ bitbake core-image-doom
 To build for a different device, set the `BUILD_DEVICE` environment variable,
 like so:
 
-```
+```bash
 export BUILD_DEVICE=qemu
 bitbake core-image-doom
 ```
 
 For a list of all possible devices, see `meta-doom-demo/conf/devices`
+
+The `init-build-env` script adds a helper function called `get_devices` which
+will list all devices that can be configured. This can be used to build all devices with:
+
+```bash
+for d in $(get_devices); do BUILD_DEVICE=$d bitbake core-iamge-doom; done
+```
 
 ## Adding new platforms
 

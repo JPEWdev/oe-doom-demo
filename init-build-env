@@ -13,13 +13,26 @@ else
     fi
 fi
 
-export TEMPLATECONF="$(realpath $(dirname $THIS_SCRIPT)/meta-doom-demo/conf/templates/doom-demo)"
+ROOT_DIR=$(realpath $(dirname $THIS_SCRIPT))
+
+export TEMPLATECONF="$ROOT_DIR/meta-doom-demo/conf/templates/doom-demo"
 
 if [ -n "$1" ]; then
     BUILDDIR=$(realpath "$1")
 else
-    BUILDDIR=$(realpath $(dirname $THIS_SCRIPT))/build
+    BUILDDIR=$ROOT_DIR/build
 fi
+
+get_devices() {
+    (
+    cd $ROOT_DIR/meta-doom-demo/conf/devices
+    for f in *; do
+        if [ -e $f/config.conf ]; then
+            echo $f
+        fi
+    done
+    )
+}
 
 cd $(dirname $THIS_SCRIPT)/core
 . oe-init-build-env "$BUILDDIR"
