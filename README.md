@@ -7,7 +7,7 @@ This repository builds the OpenEmbedded Doom Demo
 To try out this project in QEMU, run the following commands:
 
 ```
-git submodules update --init --recursive
+git submodule update --init --recursive
 . init-build-env
 bitbake core-image-doom
 runqemu sdl gl-es kvm slirp
@@ -20,7 +20,7 @@ This repository uses submodules and a simple wrapper script to set the default
 first step is to clone down the submodules:
 
 ```bash
-git submodules update --init --recursive
+git submodule update --init --recursive
 ```
 
 *NOTE:* When dealing with submodules, it is highly recommended to enable
