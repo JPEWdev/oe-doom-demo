@@ -18,3 +18,7 @@
 	path = meta-openembedded
 	url = git://git.openembedded.org/meta-openembedded
 	branch = master 
+[submodule "meta-meson"]
+	path = meta-meson
+	url = https://github.com/superna9999/meta-meson.git
+	branch = master
