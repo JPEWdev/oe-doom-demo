@@ -1,0 +1,23 @@
+name: check-submodules
+run-name: "Check submodules"
+on:
+  - pull_request
+  - push
+jobs:
+  build:
+    name: Check submodules
+    runs-on: Ubuntu-22.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      # Checks that all the submodule checkouts are on a commit reachable by
+      # their branch parameter. Prevents accidentally moving the submodule to
+      # an unintentional branch without update .gitmodules also
+      - name: Check submodules branches
+        run: |
+          git submodule foreach --recursive 'BRANCH=$(git -C $toplevel config --file .gitmodules submodule.$name.branch); git merge-base --is-ancestor HEAD origin/$BRANCH || (echo "HEAD is not on origin/$BRANCH!" && exit 1)'
+        shell: bash
