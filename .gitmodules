@@ -13,7 +13,7 @@
 [submodule "meta-doom"]
 	path = meta-doom
 	url = https://github.com/JPEWdev/meta-doom.git
-	branch = main
+	branch = master
 [submodule "meta-openembedded"]
 	path = meta-openembedded
 	url = git://git.openembedded.org/meta-openembedded
