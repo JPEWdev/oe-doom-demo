@@ -13,10 +13,11 @@ jobs:
     strategy:
       matrix:
         device:
+          - le-potato
+          - odroid-h3
           - qemu
           - raspberrypi3
           - raspberrypi4
-          - le-potato
     steps:
       - name: Checkout
         uses: actions/checkout@master
