@@ -22,3 +22,7 @@
 	path = meta-meson
 	url = https://github.com/superna9999/meta-meson.git
 	branch = master
+[submodule "meta-odroid"]
+	path = meta-odroid
+	url = https://github.com/akuster/meta-odroid.git
+	branch = master
