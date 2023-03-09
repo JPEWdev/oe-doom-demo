@@ -17,7 +17,7 @@ DOOM_GAME ?= "\
 
 CORE_IMAGE_BASE_INSTALL += "\
     kernel-modules \
-    zdoom-autolaunch \
+    oe-doom-launcher \
     weston \
     weston-init \
     avahi-daemon \
