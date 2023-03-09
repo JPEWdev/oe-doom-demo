@@ -8,7 +8,12 @@ inherit core-image features_check
 
 REQUIRED_DISTRO_FEATURES = "wayland"
 
-DOOM_GAME ?= "chexquest-galactic-conflict"
+DOOM_GAME ?= "\
+    chexquest-galactic-conflict \
+    freedoom-1 \
+    freedoom-2 \
+    freedm \
+    "
 
 CORE_IMAGE_BASE_INSTALL += "\
     kernel-modules \
