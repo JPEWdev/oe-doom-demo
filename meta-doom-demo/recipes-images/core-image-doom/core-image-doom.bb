@@ -21,6 +21,5 @@ CORE_IMAGE_BASE_INSTALL += "\
     weston \
     weston-init \
     avahi-daemon \
-    avahi-autoipd \
     ${DOOM_GAME} \
     "

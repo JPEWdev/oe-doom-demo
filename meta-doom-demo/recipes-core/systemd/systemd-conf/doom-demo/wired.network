@@ -1,0 +1,15 @@
+[Match]
+Type=ether
+Name=!veth*
+KernelCommandLine=!nfsroot
+KernelCommandLine=!ip
+
+[Network]
+DHCP=yes
+LinkLocalAddressing=fallback
+
+[DHCP]
+UseMTU=yes
+RouteMetric=10
+ClientIdentifier=mac
+MaxAttempts=3
