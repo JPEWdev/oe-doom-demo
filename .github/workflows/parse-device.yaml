@@ -14,6 +14,7 @@ jobs:
       matrix:
         device:
           - le-potato
+          - odroid-c4
           - odroid-h3
           - qemu
           - raspberrypi3
