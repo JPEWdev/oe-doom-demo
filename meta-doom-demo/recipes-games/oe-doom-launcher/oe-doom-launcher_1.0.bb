@@ -16,7 +16,7 @@ SRC_URI = "\
     file://config.ini \
     "
 BRANCH = "main"
-SRCREV = "699de379b65d2a076568ecc806154e7f492da2f9"
+SRCREV = "c618baea4497b2ddbff23e92735dc505c16c8cd2"
 
 S = "${WORKDIR}/git"
 
